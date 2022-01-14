@@ -32,6 +32,7 @@ abstract class Auto implements autoInterface
 
 class Bulldozer extends Auto 
 {
+    protected $work = 'копать';
     protected $fuel = 'diesel auto';
     public $ability = 'копать';
     public function refuel()
@@ -42,8 +43,9 @@ class Bulldozer extends Auto
 
 class Truck extends Auto 
 {
+    protected $work = 'доставка';
     protected $fuel = 'gas';
-    public $ability = 'опустить кузов';
+    public $ability = 'включить дворники';
     
     public function refuel()
     {
@@ -53,8 +55,9 @@ class Truck extends Auto
 
 class Tesla extends Auto
 {
+    protected $work = 'перевозить людей';
     protected $fuel = 'electricity';
-    public $ability = 'заряжаться от электричества';
+    public $ability = 'сигналить';
     public function refuel()
     {
         $this->refuel();
